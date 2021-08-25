@@ -14,8 +14,8 @@ import java.util.List;
 @Service
 public class AmazonEC2InstanceServiceImpl implements AmazonEC2InstanceService {
     private final AmazonEC2 amazonEC2;
-    private String imageId;
-    private String keyName;
+    private final String imageId;
+    private final String keyName;
 
     public AmazonEC2InstanceServiceImpl(AmazonEC2 amazonEC2,
                                         @Value("#{environment.IMAGE_ID}") String imageId,
